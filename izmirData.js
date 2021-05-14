@@ -8,14 +8,14 @@ var map = new google.maps.Map(document.getElementById("map"), {
   $.getJSON("https://openapi.izmir.bel.tr/api/izdeniz/iskeleler", function (data) {
     for(var i=0;i<Object.keys(data).length;i++)
     {
-      var lat = data[i].Enlem;
-	  var lng = data[i].Boylam;
-	  var title = data[i].Adi;
-	  marker = new google.maps.Marker({
-	    position: { lat: lat , lng: lng },
-		map: map,
-		title: title
-	  });
+       var lat = data[i].Enlem;
+       var lng = data[i].Boylam;
+       var title = data[i].Adi;
+       marker = new google.maps.Marker({
+	   position: { lat: lat , lng: lng },
+           map: map,
+	   title: title
+       });
     }
  });
 }
